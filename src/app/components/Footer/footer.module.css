@@ -1,0 +1,204 @@
+.default {
+  --font-Roboto: "Roboto", sans-serif;
+  --containerPadding: 0 9.920634920634921vw;
+  --containerMarginTop: 9.920634920634921vw;
+  --backgroundContainerPadding: 6.510416666666667vw 9.765625vw;
+  --mobileContainerMarginTop: 16vw;
+  --mobileContainerPadding: 0 6.4vw;
+  --mobileBackgroundContainerPadding: 10.666666666666668vw 6.4vw;
+  --borderRadius: 0.6613756613756614vw;
+  --mobileBorderRadius: 2.666666666666667vw;
+  --padding100: 6.613756613756613vw;
+  --margin15: 0.992063492063492vw;
+  --margin20: 1.3227513227513228vw;
+  --margin30: 1.984126984126984vw;
+  --margin70: 4.62962962962963vw;
+  --margin100: 6.613756613756613vw;
+  --gap70: 4.62962962962963vw;
+  --gap20: 1.3227513227513228vw;
+  --gap30: 1.984126984126984vw;
+  --gap40: 2.6455026455026456vw;
+  --gap50: 3.3068783068783065vw;
+  --mainbgColor: #12171c;
+  --bgColor: #0c1117;
+  --font18: 1.1904761904761905vw;
+  --font24: 1.5873015873015872vw;
+  --font28: 1.8518518518518516vw;
+  --lineHeight18: 1.6666666666666667vw;
+  --lineHeight24: 2.2222222222222223vw;
+  --lineHeight28: 2.169973544973545vw;
+  --letterSpace18: 0.023809523809523808vw;
+  --letterSpace24: 0.015873015873015872vw;
+  --letterSpace28: 0.03703703703703704vw;
+  --mfont16: 4.266666666666667vw;
+  --mlineHeight16: 5.973333333333334vw;
+  --mletterSpace16: 0.08533333333333333vw;
+
+  --mfont12: 3.2vw;
+  --mlineHeight12: 4.4799999999999995vw;
+  --mletterSpace12: 0.4266666666666667vw;
+  --mfont14: 3.733333333333334vw;
+  --mlineHeight14: 5.226666666666667vw;
+  --mletterSpace14: 0.4266666666666667vw;
+
+  --mfont18: 4.8vw;
+  --mlineHeight18: 5.624vw;
+  --mletterSpace18: 0.4266666666666667vw;
+}
+
+.container {
+  padding: var(--containerPadding);
+  padding-top: var(--margin70);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  /* height: 50vh; */
+  background: #fafafa;
+}
+
+.container h3 {
+  font-size: 1.1904761904761905vw;
+  line-height: 1.6666666666666667vw;
+  letter-spacing: normal;
+}
+
+.logoContainer img {
+  width: 8.058201058201059vw;
+  height: 2.6455026455026456vw;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title h2 {
+  text-align: center;
+  margin-top: 0.7936507936507936vw;
+  width: 47.52645502645503vw;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  height: 7.605820105820106vw;
+  flex-wrap: wrap;
+}
+
+.links a {
+  width: fit-content;
+}
+
+.emailAndText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap30);
+  position: relative;
+  height: fit-content;
+  width: 26.455026455026452vw;
+}
+
+.emailAndText h3 {
+  width: 15.211640211640212vw;
+}
+
+.emailAndText input::placeholder {
+  font-size: 1.1904761904761905vw;
+  line-height: 1.6666666666666667vw;
+  letter-spacing: normal;
+  color: #58595d;
+}
+
+.emailAndText input {
+  background: transparent;
+  border: none;
+  padding-bottom: var(--margin30);
+  padding: 0.992063492063492vw 0;
+  border-bottom: 0.06613756613756613vw solid #222222;
+  transition: border-bottom 0.3s ease;
+  outline: none;
+  height: 3.835978835978836vw;
+  font-size: 1.3227513227513228vw;
+  line-height: 1.8518518518518516vw;
+  letter-spacing: 0.026455026455026457vw;
+}
+
+.emailAndText input:-webkit-autofill,
+.emailAndText input:-webkit-autofill:hover,
+.emailAndText input:-webkit-autofill:focus,
+.emailAndText input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #0c1117 inset !important; /* Set the background color you want */
+}
+
+.emailAndText input:focus {
+  border-bottom: 0.06613756613756613vw solid #222222;
+}
+
+.emailAndText img {
+  width: var(--gap40);
+  height: var(--gap40);
+
+  position: absolute;
+  right: 0;
+  bottom: 0.492063492063492vw;
+}
+
+.container hr {
+  grid-column: span 3;
+  height: 0.06613756613756613vw;
+  margin-top: 3vw;
+  margin-bottom: 2.6455026455026456vw;
+}
+
+.bottom {
+  grid-column: span 3;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2.6455026455026456vw;
+}
+
+.bottom h3 {
+  width: 17.658730158730158vw;
+  font-weight: 500;
+  font-size: 1.8518518518518516vw;
+  line-height: 2.592592592592593vw;
+  font-weight: 500;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap20);
+}
+
+.iconContainer {
+  display: flex;
+  gap: 1.0582010582010581vw;
+}
+
+.iconContainer img {
+  width: var(--gap40);
+  height: var(--gap40);
+}
+
+.copyRight {
+  grid-column: span 3;
+  height: 3.6375661375661372vw;
+  background-color: #0063db;
+  display: flex;
+  justify-content: center;
+  padding: var(--margin15) 0;
+
+  /* border-radius: 3.6375661375661372vw; */
+}
+
+.copyRight h3 {
+  line-height: normal;
+  color: #ffff;
+  text-align: center;
+
+  font-size: 1.1904761904761905vw;
+  line-height: 1.6666666666666667vw;
+  letter-spacing: normal;
+}
