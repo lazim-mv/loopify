@@ -156,6 +156,26 @@
     height: auto;
   }
 
+  .card:nth-child(1) {
+    background: #effaff;
+    top: 20vw;
+  }
+  
+  .card:nth-child(2) {
+    background: #ffeeda;
+    top: 25vw;
+  }
+  
+  .card:nth-child(3) {
+    background: #eee9ff;
+    top: 30vw;
+  }
+  
+  .card:nth-child(4){
+    visibility: hidden;
+    height: 10vh;
+  }
+
   .content {
     width: auto;
     display: flex;
