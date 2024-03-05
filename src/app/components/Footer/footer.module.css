@@ -202,3 +202,109 @@
   line-height: 1.6666666666666667vw;
   letter-spacing: normal;
 }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: var(--mobileContainerPadding);
+    padding-top: 10.666666666666668vw;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    background: #fafafa;
+  }
+
+  .container hr {
+    display: none;
+  }
+
+  .logoContainer img {
+    width: 24.368vw;
+    height: 8vw;
+    margin-bottom: 8vw;
+  }
+
+  .links {
+    flex-direction: column;
+    height: 18vw;
+    margin-bottom: 8vw;
+  }
+
+  .emailAndText {
+    width: auto;
+    gap: 5vw;
+  }
+
+  .emailAndText input::placeholder {
+    font-size: 4.266666666666667vw;
+    line-height: 5.973333333333334vw;
+  }
+
+  .emailAndText input {
+    height: auto;
+    padding: 4.333333333333334vw 0 3.333333333333334vw 0;
+  }
+
+  .emailAndText h3 {
+    width: 47.733333333333334vw;
+  }
+
+  .container h3 {
+    font-size: 3.733333333333334vw;
+    line-height: 5.226666666666667vw;
+    letter-spacing: normal;
+  }
+
+  .emailAndText img {
+    width: 8vw;
+    height: 8vw;
+
+    position: absolute;
+    right: 0;
+    bottom: 1.892063492063492vw;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8vw;
+    padding-bottom: 8vw;
+    margin-top: 5.333333333333334vw;
+  }
+
+  .bottom h3 {
+    width: 60vw;
+    font-size: 4.8vw;
+    line-height: 6.72vw;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    gap: 2.666666666666667vw;
+  }
+
+  .iconContainer {
+    display: flex;
+    gap: 2.666666666666667vw;
+  }
+
+  .iconContainer img {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .copyRight {
+    height: 13.333333333333334vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .copyRight h3 {
+    font-size: 3.733333333333334vw;
+    line-height: 5.226666666666667vw;
+    letter-spacing: normal;
+  }
+}

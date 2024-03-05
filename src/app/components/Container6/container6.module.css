@@ -99,3 +99,57 @@
   width: 18.51851851851852vw;
   height: 16.534391534391535vw;
 }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 10.666666666666668vw 0 10.666666666666668vw 6.4vw;
+    margin-top: var(--mobileContainerMarginTop);
+    background: #fdf3ea;
+    padding-bottom: var(--margin100);
+    padding-top: var(--margin100);
+    overflow: hidden;
+  }
+
+  .title{
+    padding-right: 6.4vw;
+  }
+  
+  .title h2 {
+    text-align: center;
+    margin-top: 0vw;
+    width: auto;
+  }
+
+  .cards {
+    display: flex;
+    gap: 4vw;
+    margin-top: 8vw;
+    overflow-x: scroll;
+    padding-bottom: calc(5.333333333333334vw/2);
+    padding-right: 6.4vw;
+  }
+  
+  .cards::-webkit-scrollbar {
+    height: 0;
+    border-radius: 0.6613756613756614vw;
+    background-color: rgba(255, 255, 255, .4);
+    width: 80%;
+  }
+  
+  .cards::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 2vw;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+  }
+  
+  .card img {
+    width: 66.66666666666666vw;
+    height: 59.46666666666667vw;
+  }
+
+}

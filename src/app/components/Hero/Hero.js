@@ -9,15 +9,17 @@ import {
 import Header from "../Header/Header";
 import { heroData } from "@/app/contents/content";
 import Image from "next/image";
+import MobileHeader from "../MobileHeader/MobileHeader";
 
 const Hero = () => {
   return (
     <>
       <div className={styles.wrapContainer}>
         <Header />
+        <MobileHeader />
         <div className={styles.container1}>
           <div className={styles.left}>
-            <h1 className={styles.notAnimatedText}>
+            <h1>
               {heroData.sectionTitle}
               <span>{heroData.sectionSpan}</span>
             </h1>

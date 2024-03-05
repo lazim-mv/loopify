@@ -152,7 +152,7 @@ a {
 
 .linksText {
   font-weight: 400;
-  color: #ffffff;
+  color: #222222;
 }
 
 .active h4 {
@@ -303,27 +303,26 @@ a {
     font-size: 8.533333333333333vw;
     font-weight: 400;
     letter-spacing: 0.021164021164021166vw;
-    line-height: 10.239999999999998vw;
+    line-height: 11.946666666666667vw;
     color: #222222;
     text-transform: capitalize;
   }
 
   h2 {
-    font-size: 7.466666666666668vw;
-    font-weight: 400;
-    line-height: 8.749333333333334vw;
+    font-size: 6.4vw;
+    font-weight: 500;
+    line-height: 8.959999999999999vw;
     color: #222222;
     text-transform: capitalize;
     padding: 0 !important;
     margin: 0;
     text-align: center;
-    letter-spacing: 0.4266666666666667vw;
   }
 
   h3 {
     font-size: 5.333333333333334vw;
     font-weight: 400;
-    line-height: 6.250666666666667vw;
+    line-height: 7.466666666666668vw;
     color: #222222;
     text-transform: capitalize;
     letter-spacing: 0.4266666666666667vw;
@@ -333,17 +332,14 @@ a {
     font-size: 3.2vw;
     font-weight: 400;
     line-height: 3.8400000000000003vw;
-    color: #222222;
     text-transform: capitalize;
-    padding: 0 0 2.666666666666667vw !important;
-    margin-bottom: 4vw;
+    margin-bottom: 2.1333333333333333vw;
   }
 
   h5 {
     font-size: 3.2vw;
     font-weight: 400;
     line-height: 3.8400000000000003vw;
-    color: #222222;
     text-transform: capitalize;
     /* padding: 1.3333333333333335vw 5.333333333333334vw !important; */
     /* margin-bottom: 2.666666666666667vw; */

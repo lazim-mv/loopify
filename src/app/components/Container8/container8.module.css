@@ -67,7 +67,6 @@
   width: 50vw;
 }
 
-
 .faqContainer {
   display: grid;
   grid-template-columns: 25.396825396825395vw 50.79365079365079vw;
@@ -181,12 +180,18 @@
     margin-bottom: 8vw;
   }
 
+  .title h2 {
+    text-align: center;
+    margin-top: 0;
+    width: auto;
+  }
+
   .faqContainer {
     grid-template-columns: 1fr;
   }
 
   .firstCol {
-    display: flex;
+    display: none;
     justify-content: center;
   }
 
@@ -209,6 +214,7 @@
     line-height: var(--mlineHeight16);
     letter-spacing: var(--mletterSpace16);
     font-weight: 400;
+    width: 100%;
   }
 
   .plusIcon {
