@@ -66,6 +66,9 @@ const container3Data = {
         "Loopify's business owner dashboard offers a single, intuitive platform to monitor key metrics and gain valuable insights into your subscription business. Track new subscribers, churn rate, and revenue growth all at a glance, allowing you to identify trends and make data-driven decisions that propel your success.",
       img: "/Container3/2.png",
     },
+    {
+      s: "",
+    },
   ],
 };
 

@@ -70,6 +70,12 @@
   margin-top: var(--margin70);
 }
 
+.revealContainer{
+  overflow: hidden;
+  width: 14.417989417989418vw;
+  height: 12.3015873015873vw;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -79,8 +85,8 @@
   align-items: center;
   gap: var(--gap20);
 
-  width: 14.417989417989418vw;
-  height: 12.3015873015873vw;
+  width: 100%;
+  height: 100%;
   border: 0.06613756613756613vw solid #eeeeee;
   border-radius: var(--gap20);
 }
@@ -120,6 +126,12 @@
     margin-top: 8vw;
   }
 
+  .revealContainer{
+    overflow: hidden;
+    width: 26.5vw;
+    height: 32vw;
+  }
+
   .card {
     display: flex;
     flex-direction: column;
@@ -129,8 +141,7 @@
     align-items: center;
     gap: calc(5.333333333333334vw / 2);
 
-    width: 26.5vw;
-    height: 32vw;
+    
     border: 0.26666666666666666vw solid #eeeeee;
     border-radius: 5.333333333333334vw;
   }

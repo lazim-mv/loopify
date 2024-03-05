@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import styles from "./container3.module.css";
 import {
   CardHeading,
@@ -8,8 +9,42 @@ import {
 } from "../ButtonComponent";
 import { container3Data } from "@/app/contents/content";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const Container3 = () => {
+const Container3 = ({ mobile }) => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    let revealContainers = document.querySelectorAll(
+      ".container3_imgContainer___NBxI"
+    );
+
+    revealContainers.forEach((container) => {
+      let image = container.querySelector(".container3_img__o8scV");
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          // duration: 2,
+          toggleActions: "restart none none reset",
+        },
+      });
+
+      tl.set(container, { autoAlpha: 1 });
+      tl.from(container, 1.5, {
+        xPercent: 0,
+        ease: "Power2.out",
+        duration:.8,
+      });
+      tl.from(image, 1.5, {
+        xPercent: 100,
+        delay: -1.5,
+        width:"100%",
+        ease: "Power2.out",
+      });
+    });
+  });
+
   return (
     <div className={styles.container}>
       <div className={styles.title}>
@@ -23,7 +58,11 @@ const Container3 = () => {
               <SectionName
                 sectionText={data.sectionName}
                 background={data.bg}
-                padding="0.5291005291005291vw 1.0582010582010581vw"
+                padding={
+                  mobile
+                    ? "1.0666666666666667vw 3.2vw"
+                    : "0.5291005291005291vw 1.0582010582010581vw"
+                }
               />
               <CardHeading sectionText={data.cardHeading} />
               <SectionDescription sectionText={data.description} />
@@ -37,6 +76,7 @@ const Container3 = () => {
                 quality={100}
                 priority={true}
                 unoptimized
+                className={styles.img}
               />
             </div>
           </div>
