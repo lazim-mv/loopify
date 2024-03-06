@@ -90,6 +90,7 @@
 .links a {
   width: fit-content;
   cursor: pointer;
+  transition: .6s ease;
 }
 
 .links a:hover{
@@ -189,10 +190,13 @@
   width: var(--gap40);
   height: var(--gap40);
   cursor: pointer;
+  transition: .6s ease;
+
 }
 
 .iconContainer img:hover{
   filter: brightness(5);
+  transition: .4s ease;
 }
 
 .copyRight {
