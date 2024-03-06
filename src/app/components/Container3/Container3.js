@@ -9,44 +9,42 @@ import {
 } from "../ButtonComponent";
 import { container3Data } from "@/app/contents/content";
 import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Container3 = ({ mobile }) => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    let revealContainers = document.querySelectorAll(
-      ".container3_imgContainer___NBxI"
-    );
+  //   let revealContainers = document.querySelectorAll(
+  //     ".container3_imgContainer___NBxI"
+  //   );
 
-    revealContainers.forEach((container) => {
-      let image = container.querySelector(".container3_img__o8scV");
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container,
-          // duration: 2,
-          toggleActions: "restart none none reset",
-        },
-      });
+  //   revealContainers.forEach((container) => {
+  //     let image = container.querySelector(".container3_img__o8scV");
+  //     let tl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: container,
+  //         // duration: 2,
+  //         toggleActions: "restart none none reset",
+  //       },
+  //     });
 
-      tl.set(container, { autoAlpha: 1 });
-      tl.from(container, 1.5, {
-        xPercent: 0,
-        ease: "Power2.out",
-        duration:.8,
-      });
-      tl.from(image, 1.5, {
-        xPercent: 100,
-        delay: -1.5,
-        width:"100%",
-        ease: "Power2.out",
-      });
-    });
-  });
+  //     tl.set(container, { autoAlpha: 1 });
+  //     tl.from(container, 1.5, {
+  //       xPercent: 0,
+  //       ease: "Power2.out",
+  //       duration:.8,
+  //     });
+  //     tl.from(image, 1.5, {
+  //       xPercent: 100,
+  //       delay: -1.5,
+  //       width:"100%",
+  //       ease: "Power2.out",
+  //     });
+  //   });
+  // });
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="services">
       <div className={styles.title}>
         <SectionName sectionText={container3Data.sectionName} />
         <SectionTitle sectionText={container3Data.sectionTitle} />

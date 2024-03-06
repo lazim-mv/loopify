@@ -28,7 +28,7 @@ const Container8 = () => {
   };
 
   return (
-    <div className={styles.container7}>
+    <div className={styles.container7} id="faq">
       <div className={styles.title}>
         <SectionName sectionText="FAQ" />
         <SectionTitle sectionText="Frequently Asked Questions (FAQ)" />

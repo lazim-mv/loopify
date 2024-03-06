@@ -39,6 +39,7 @@
 .logoContainer {
   width: 8.058201058201059vw;
   height: 2.6455026455026456vw;
+  cursor: pointer;
 }
 
 .logoContainer img{
@@ -66,7 +67,8 @@
 }
 
 .hUlList a:hover{
-  color: #222222;
+  color: rgba(0, 0, 0, 0.2);
+  transition: .4s ease;
 }
 
 .hUlList li {

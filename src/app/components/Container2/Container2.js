@@ -10,7 +10,7 @@ import {
 
 const Container2 = () => {
   return (
-    <div className={styles.contianer}>
+    <div className={styles.contianer} id="about">
       <Image
         src={container2Data.img}
         width={180}

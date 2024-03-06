@@ -117,15 +117,15 @@
   width: 34.12698412698413vw;
   height: 24.272486772486772vw;
   position: relative;
-  visibility: hidden;
-  overflow: hidden;
+  /* visibility: hidden;
+  overflow: hidden; */
 }
 
 .imgContainer .img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform-origin: right;
+  /* transform-origin: right; */
 }
 
 @media only screen and (max-width: 767px) {

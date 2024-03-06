@@ -2,16 +2,24 @@ import React from "react";
 import styles from "./footer.module.css";
 import Image from "next/image";
 import { CardHeading } from "../ButtonComponent";
+import { useLenis } from "@studio-freight/react-lenis";
 
 const Footer = () => {
-  const linksData = [
-    "Home",
-    "About",
-    "Services",
-    "Why Us",
-    "FAQ",
-    "Contact Us",
+  const menuList = [
+    { text: "Home", id: "home" },
+    { text: "About Us", id: "about" },
+    { text: "Services", id: "services" },
+    { text: "WhyUs", id: "whyus" },
+    { text: "FAQ", id: "faq" },
   ];
+
+  const lenis = useLenis(({ scroll }) => {});
+
+  const handleMenuClick = (id) => {
+    lenis.scrollTo(`#${id}`, { lerp: 0.05 });
+    setActiveId(`#${id}`);
+    console.log(`#${id}`, "class");
+  };
 
   const icons = [
     "/Footer/2.svg",
@@ -22,21 +30,23 @@ const Footer = () => {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.logoContainer}>
-          <Image
-            src="/Header/hLogo.svg"
-            width={180}
-            height={60}
-            alt="image"
-            quality={100}
-            priority={true}
-            unoptimized
-          />
-        </div>
+        <a onClick={() => handleMenuClick("home")}>
+          <div className={styles.logoContainer}>
+            <Image
+              src="/Header/hLogo.svg"
+              width={180}
+              height={60}
+              alt="image"
+              quality={100}
+              priority={true}
+              unoptimized
+            />
+          </div>
+        </a>
         <div className={styles.links}>
-          {linksData.map((data, index) => (
-            <a href="" key={index}>
-              {data}
+          {menuList.map((data, index) => (
+            <a key={index} onClick={() => handleMenuClick(data.id)}>
+              {data.text}
             </a>
           ))}
         </div>

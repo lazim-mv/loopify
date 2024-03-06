@@ -14,7 +14,7 @@ import MobileHeader from "../MobileHeader/MobileHeader";
 const Hero = () => {
   return (
     <>
-      <div className={styles.wrapContainer}>
+      <div className={styles.wrapContainer} id="home">
         <Header />
         <MobileHeader />
         <div className={styles.container1}>

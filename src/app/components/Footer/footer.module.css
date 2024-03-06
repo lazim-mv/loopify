@@ -65,6 +65,7 @@
 .logoContainer img {
   width: 8.058201058201059vw;
   height: 2.6455026455026456vw;
+  cursor: pointer;
 }
 
 .title {
@@ -88,6 +89,12 @@
 
 .links a {
   width: fit-content;
+  cursor: pointer;
+}
+
+.links a:hover{
+  color: rgba(0, 0, 0, 0.2);
+  transition: .4s ease;
 }
 
 .emailAndText {
@@ -133,6 +140,7 @@
 
 .emailAndText input:focus {
   border-bottom: 0.06613756613756613vw solid #222222;
+  color: #222222;
 }
 
 .emailAndText img {
@@ -180,6 +188,11 @@
 .iconContainer img {
   width: var(--gap40);
   height: var(--gap40);
+  cursor: pointer;
+}
+
+.iconContainer img:hover{
+  filter: brightness(5);
 }
 
 .copyRight {
