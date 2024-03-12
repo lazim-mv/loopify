@@ -98,7 +98,7 @@ const SectionName = ({
         width: width ? width : "fit-content",
         background: background ? background : "#0063DB",
         display: "inline-block",
-        padding: padding ? padding : "0.5291005291005291vw 1.984126984126984vw",
+        padding: padding ? padding : "1.06667vw 3.2vw",
       }}
     >
       {sectionText}

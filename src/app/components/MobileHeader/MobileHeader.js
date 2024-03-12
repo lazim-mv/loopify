@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./mobileHeader.module.css";
 import { BtnComponent } from "../ButtonComponent";
+import { useLenis } from "@studio-freight/react-lenis";
 
 function MobileHeader() {
-  const pathname = usePathname();
-
+  const [activeId, setActiveId] = useState("#home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -20,12 +20,19 @@ function MobileHeader() {
   };
 
   const menuList = [
-    { text: "Home", href: "/" },
-    { text: "About Us", href: "/pages/About/" },
-    { text: "Services", href: "/pages/Services/" },
-    { text: "Blog", href: "/pages/HeaderBlog/" },
-    { text: "Contact Us", href: "/pages/Contact/" },
+    { text: "Home", id: "home" },
+    { text: "About Us", id: "about" },
+    { text: "Services", id: "services" },
+    { text: "WhyUs", id: "whyus" },
+    { text: "FAQ", id: "faq" },
   ];
+
+  const lenis = useLenis(({ scroll }) => {});
+
+  const handleMenuClick = (id) => {
+    lenis.scrollTo(`#${id}`, { lerp: 0.05 });
+    setActiveId(`#${id}`);
+  };
 
   return (
     <div
@@ -102,28 +109,18 @@ function MobileHeader() {
             {menuList.map((item, index) => (
               <a
                 key={index}
-                className={`linksWrapper linksText ${
-                  pathname !== undefined &&
-                  pathname !== null &&
-                  pathname !== "" &&
-                  pathname === item.href
-                    ? "active"
-                    : ""
-                } ${styles.linksWrapper} ${styles.linksText}`}
-                href={item.href}
-                style={{
-                  transform: isMenuOpen
-                    ? "translateY(0)"
-                    : "translateY(-100vw)",
-                }}
+                className={` ${
+                  activeId === `#${item.id}` ? styles.active : ""
+                }`}
+                onClick={() => handleMenuClick(item.id)}
               >
-                {item.text}
+                <div>{item.text}</div>
               </a>
             ))}
 
-            <a href="/" style={{ display: isMenuOpen ? "block" : "none" }}>
+            <a href="https://calendly.com/loopifysubs" style={{ display: isMenuOpen ? "block" : "none" }}>
               <BtnComponent
-                buttonText="Get in Touch"
+                buttonText="Book a Demo"
                 header={true}
                 bg="#2b61f7"
                 arrow={true}

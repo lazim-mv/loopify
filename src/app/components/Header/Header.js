@@ -62,9 +62,9 @@ function Header() {
             </ul>
           </div>
         </div>
-        <a href="/">
+        <a href="https://calendly.com/loopifysubs">
           <BtnComponent
-            buttonText="Get in Touch"
+            buttonText="Book a Demo"
             borderColor="rgba(255, 255, 255, 0.6)"
             bg="#0063DB"
             color="#fff"
