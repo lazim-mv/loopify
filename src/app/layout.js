@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         <link
           rel="icon"
           href="/favicon.png"
-          type="image/svg+xml"
+          type="image/png"
           sizes="16x16 32x32 48x48"
         />
 
