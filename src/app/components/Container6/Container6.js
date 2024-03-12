@@ -13,17 +13,12 @@ const Container6 = () => {
   const { windowSize, isSmallScreen } = useWindowSize();
 
   const totalData = container6Data.cardData.length;
-  console.log(totalData, "clicked");
   const clicks = isSmallScreen ? totalData - 1 : totalData - 4;
   const dynamicValue = isSmallScreen ? 70 : 20.5;
-  console.log(dynamicValue, currentIndex, isSmallScreen, "clicke");
 
   const nextImage = () => {
     if (currentIndex < clicks) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
-      console.log("clicked1");
-      console.log(currentIndex, "clicked");
-      console.log(dynamicValue, "clicked");
     } else {
       setCurrentIndex(0);
       console.log("clicked2");

@@ -18,7 +18,6 @@ const Footer = () => {
   const handleMenuClick = (id) => {
     lenis.scrollTo(`#${id}`, { lerp: 0.05 });
     setActiveId(`#${id}`);
-    console.log(`#${id}`, "class");
   };
 
   const icons = [

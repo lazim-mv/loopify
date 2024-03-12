@@ -18,14 +18,11 @@ function Header() {
     { text: "FAQ", id: "faq" },
   ];
 
-  console.log(pathname, "path");
-
   const lenis = useLenis(({ scroll }) => {});
 
   const handleMenuClick = (id) => {
     lenis.scrollTo(`#${id}`, { lerp: 0.05 });
     setActiveId(`#${id}`);
-    console.log(`#${id}`, "class");
   };
 
   return (
